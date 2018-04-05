@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ShoppingSystem.Dal;
+using ShoppingSystem.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +12,21 @@ namespace ShoppingSystem.Controllers
     {
         public ActionResult Index()
         {
+            //准备
+            UserDal userDal = new UserDal();
+            User user = new User()
+            {
+                Address = "asdasdsads",
+                Email = "asdasdsadads",
+                Name = "adsasdadsad",
+                PassWord = "asdasd",
+                RegisterTime = DateTime.Now,
+                State = 1,
+                Type = 1,
+                UpdateTime = DateTime.Now
+            };
+            //动作
+            var res = userDal.AddUser(user);
             return View();
         }
 
