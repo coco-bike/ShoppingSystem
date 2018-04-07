@@ -48,3 +48,4 @@ E:\Git VersionControl\ShoppingSystem\ShoppingSystem\obj\Debug\ShoppingSystem.csp
 E:\Git VersionControl\ShoppingSystem\ShoppingSystem\obj\Debug\ShoppingSystem.dll
 E:\Git VersionControl\ShoppingSystem\ShoppingSystem\obj\Debug\ShoppingSystem.pdb
 E:\Git VersionControl\ShoppingSystem\ShoppingSystem\obj\Debug\ShoppingSystem.csprojResolveAssemblyReference.cache
+E:\Git VersionControl\ShoppingSystem\ShoppingSystem\obj\Debug\ShoppingSystem.csproj.CopyComplete

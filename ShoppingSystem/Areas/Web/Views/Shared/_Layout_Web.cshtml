@@ -1,0 +1,82 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="https://cdn.bootcss.com/element-ui/2.3.2/theme-chalk/index.css" rel="stylesheet">
+    <link href="~/Areas/Web/Css/_Layout_Web.css" rel="stylesheet" />
+    @RenderSection("MySection1", required: false)
+</head>
+<body>
+    <div id="webapp">
+        <el-container>
+            <el-header>Header</el-header>
+            <el-main>Main</el-main>
+        </el-container>
+
+        <el-container>
+            <el-header>Header</el-header>
+            <el-main>Main</el-main>
+            <el-footer>Footer</el-footer>
+        </el-container>
+
+        <el-container>
+            <el-aside width="200px">Aside</el-aside>
+            <el-main>Main</el-main>
+        </el-container>
+
+        <el-container>
+            <el-header>Header</el-header>
+            <el-container>
+                <el-aside width="200px">Aside</el-aside>
+                <el-main>Main</el-main>
+            </el-container>
+        </el-container>
+
+        <el-container>
+            <el-header>Header</el-header>
+            <el-container>
+                <el-aside width="200px">Aside</el-aside>
+                <el-container>
+                    <el-main>@RenderBody()</el-main>
+                    <el-footer>Footer</el-footer>
+                </el-container>
+            </el-container>
+        </el-container>
+
+        <el-container>
+            <el-aside width="200px">Aside</el-aside>
+            <el-container>
+                <el-header>Header</el-header>
+                <el-main>Main</el-main>
+            </el-container>
+        </el-container>
+
+        <el-container>
+            <el-aside width="200px">Aside</el-aside>
+            <el-container>
+                <el-header>Header</el-header>
+                <el-main>Main</el-main>
+                <el-footer>Footer</el-footer>
+            </el-container>
+        </el-container>
+    </div>
+    <!-- import Vue.js -->
+    <script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+    <script src="https://cdn.bootcss.com/element-ui/2.3.2/index.js"></script>
+    @RenderSection("MySection2", required: false)
+    <script>
+        new Vue({
+            el: '#webapp',
+            data: function () {
+                return { visible: false }
+            }
+        })
+    </script>
+</body>
+</html>
