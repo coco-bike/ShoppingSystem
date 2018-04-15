@@ -1,0 +1,78 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://cdn.bootcss.com/iview/2.13.0/styles/iview.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Css/login.css" rel="stylesheet" />
+    <title>Login</title>
+</head>
+<body>
+    <div class="sbk_background sbk_aloginbackground">
+        <div id="sbk_login" class="sbk_loginform">
+            <i-form ref="formInline" :model="formInline" :rules="ruleInline">
+                <form-item>
+                    <div class="sbk_center"><p>欢迎登录商城后台管理系统</p></div>
+                </form-item>
+                <form-item prop="user">
+                    <i-input type="text" v-model="formInline.user" placeholder="Username">
+                        <icon type="ios-person-outline" slot="prepend"></icon>
+                    </i-input>
+                </form-item>
+                <form-item prop="password">
+                    <i-input type="password" v-model="formInline.password" placeholder="Password">
+                        <icon type="ios-locked-outline" slot="prepend"></icon>
+                    </i-input>
+                </form-item>
+                <form-item>
+                      <div class="sbk_center">
+                           <i-button type="primary" v-on:click="handleSubmit('formInline')">登录</i-button>
+                      </div>
+                </form-item>
+            </i-form>
+        </div>
+    </div>
+    <!-- import Vue.js -->
+    <script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+    <!-- import iView -->
+    <script src="https://cdn.bootcss.com/iview/2.13.0/iview.min.js"></script>
+</body>
+</html>
+<script>
+    new Vue({
+       el:"#sbk_login",
+       data () {
+            return {
+                formInline: {
+                    user: '',
+                    password: ''
+                },
+                ruleInline: {
+                    user: [
+                        { required: true, message: '请输入管理员账号', trigger: 'blur' }
+                    ],
+                    password: [
+                        { required: true, message: '请输入管理员密码', trigger: 'blur' },
+                        { type: 'string', min: 6, message: 'The password length cannot be less than 6 bits', trigger: 'blur' }
+                    ]
+                }
+            }
+        },
+        methods: {
+            handleSubmit(name) {
+                this.$refs[name].validate((valid) => {
+                    if (valid) {
+                        this.$Message.success('Success!');
+                    } else {
+                        this.$Message.error('Fail!');
+                    }
+                })
+            }
+        }
+    })
+</script>

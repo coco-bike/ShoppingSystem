@@ -16,9 +16,9 @@ namespace ShoppingSystem
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "AHome", action = "Index", id = UrlParameter.Optional },
-                namespaces:new string[] { "ShoppingSystem.Areas.Admin.Controllers" }
-            ).DataTokens.Add("area", "Admin"); ;
+                defaults: new { controller = "WHome", action = "Index", id = UrlParameter.Optional },
+                namespaces:new string[] { "ShoppingSystem.Areas.Web.Controllers" }
+            ).DataTokens.Add("area", "Web"); ;
         }
     }
 }

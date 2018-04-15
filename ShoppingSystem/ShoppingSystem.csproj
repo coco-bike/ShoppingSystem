@@ -147,7 +147,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AHomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ALoginController.cs" />
     <Compile Include="Areas\Web\Controllers\WHomeController.cs" />
+    <Compile Include="Areas\Web\Controllers\WLoginController.cs" />
     <Compile Include="Areas\Web\WebAreaRegistration.cs" />
     <Compile Include="Common\ConfigHelper.cs" />
     <Compile Include="Common\DataCache.cs" />
@@ -167,11 +169,20 @@
     <Compile Include="SqlSugar\SugarBase.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Admin\Css\login.css" />
     <Content Include="Areas\Admin\Css\_Layout_Admin.css" />
+    <Content Include="Areas\Web\Css\wlogin.css" />
     <Content Include="Areas\Web\Css\_Layout_Web.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Css\whole.css" />
     <Content Include="favicon.ico" />
+    <Content Include="Files\Admin\531e9dffbabcb.jpg" />
+    <Content Include="Files\Admin\532931489604e.jpg" />
+    <Content Include="Files\Admin\5983e0973131b.jpg" />
+    <Content Include="Files\Web\531e9dffbabcb.jpg" />
+    <Content Include="Files\Web\532931489604e.jpg" />
+    <Content Include="Files\Web\5983e0973131b.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -186,6 +197,8 @@
     <Content Include="Areas\Admin\Views\Shared\_Layout_Admin.cshtml" />
     <Content Include="Areas\Admin\Views\AHome\Index.cshtml" />
     <Content Include="Areas\Web\Views\WHome\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ALogin\Login.cshtml" />
+    <Content Include="Areas\Web\Views\WLogin\Login.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -194,6 +207,8 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Js\transition.min.js" />
+    <Content Include="Scripts\Js\whole.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -214,10 +229,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Javascript\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\Home\" />
+    <Folder Include="Areas\Web\Javascript\" />
     <Folder Include="Areas\Web\Models\" />
-    <Folder Include="Areas\Web\Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

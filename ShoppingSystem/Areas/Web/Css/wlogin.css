@@ -1,0 +1,12 @@
+﻿.sbk_wloginbackground{
+    background: url(../../../Files/Web/532931489604e.jpg);
+}
+
+.sbk_form{
+    position: absolute;
+    top: 35%;
+    left: 75%;
+    width: 400px;
+    padding: 15px;
+    border-radius: 15px;
+}

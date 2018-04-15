@@ -1,0 +1,23 @@
+﻿.sbk_aloginbackground{
+    background: url(../../../Files/Admin/531e9dffbabcb.jpg);
+}
+
+.sbk_loginform {
+    position: absolute;
+    top: 30%;
+    left: 75%;
+    width: 300px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #f8f8f9;
+}
+.sbk_center{
+    width: 100%;
+    text-align: center;
+    color: #464c5b;
+    font-size: 16px;
+    font-weight: bold;
+}
+.sbk_center>p{
+    display: inline-block;
+}
