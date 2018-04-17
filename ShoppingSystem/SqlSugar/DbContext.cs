@@ -20,12 +20,12 @@ namespace ShoppingSystem.SqlSugar
                 IsAutoCloseConnection = true,
                 InitKeyType = InitKeyType.Attribute
             });
-            Db.CodeFirst.InitTables(typeof(File), typeof(Product),typeof(SaleRecord),typeof(SonAdmin),typeof(User));
+            Db.CodeFirst.InitTables(typeof(File), typeof(Goods),typeof(SaleRecord),typeof(SonAdmin),typeof(User));
         }
         public SqlSugarClient Db;//用来处理事务多表查询和复杂的操作
 
         public DbSet<File> FileDb { get { return new DbSet<File>(Db); } }
-        public DbSet<Product> ProductDb { get { return new DbSet<Product>(Db); } }
+        public DbSet<Goods> GoodsDb { get { return new DbSet<Goods>(Db); } }
         public DbSet<SaleRecord> SaleRecordDb { get { return new DbSet<SaleRecord>(Db); } }
         public DbSet<SonAdmin> SonAdminDb { get { return new DbSet<SonAdmin>(Db); } }
         public DbSet<User> UserDb { get { return new DbSet<User>(Db); } }

@@ -12,7 +12,7 @@ namespace ShoppingSystem.Models
         /// 主键
         /// </summary>
         [SugarColumn(IsNullable = false, IsPrimaryKey = true, IsIdentity = true)]
-        public long Id { get; set; }
+        public int Id { get; set; }
         /// <summary>
         /// 名称
         /// </summary>

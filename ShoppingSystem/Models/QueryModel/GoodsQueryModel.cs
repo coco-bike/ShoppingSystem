@@ -1,22 +1,19 @@
-﻿using SqlSugar;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace ShoppingSystem.Models
+namespace ShoppingSystem.Models.QueryModel
 {
-    public class Product
+    public class GoodsQueryModel
     {
         /// <summary>
         /// 产品主键
         /// </summary>
-        [SugarColumn(IsNullable = false, IsPrimaryKey = true, IsIdentity = true)]
-        public long Id { get; set; }
+        public int Id { get; set; }
         /// <summary>
         /// 商品名称
         /// </summary>
-        [SugarColumn(Length = 21)]
         public string Name { get; set; }
         /// <summary>
         /// 商品价格
@@ -38,10 +35,5 @@ namespace ShoppingSystem.Models
         /// 已售数量
         /// </summary>
         public int SaleSum { get; set; }
-        /// <summary>
-        /// 状态
-        /// </summary>
-        public int State { get; set; }
-        
     }
 }

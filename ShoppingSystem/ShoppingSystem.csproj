@@ -154,12 +154,31 @@
     <Compile Include="Common\ConfigHelper.cs" />
     <Compile Include="Common\DataCache.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\SonAdminController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Dal\FileDal.cs" />
+    <Compile Include="Dal\GoodsDal.cs" />
+    <Compile Include="Dal\GoodsSaleDal.cs" />
+    <Compile Include="Dal\SaleRecordDal.cs" />
+    <Compile Include="Dal\SonAdminDal.cs" />
     <Compile Include="Dal\UserDal.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\File.cs" />
-    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Goods.cs" />
+    <Compile Include="Models\Goods_Sale.cs" />
+    <Compile Include="Models\InputModel\FileInputModel.cs" />
+    <Compile Include="Models\InputModel\GoodsInputModel.cs" />
+    <Compile Include="Models\InputModel\SaleRecordInputModel.cs" />
+    <Compile Include="Models\InputModel\SonAdminInputModel.cs" />
+    <Compile Include="Models\InputModel\UserInputModel.cs" />
+    <Compile Include="Models\QueryModel\FileQueryModel.cs" />
+    <Compile Include="Models\QueryModel\GoodsQueryModel.cs" />
+    <Compile Include="Models\QueryModel\SaleRecordQueryModel.cs" />
+    <Compile Include="Models\QueryModel\SonAdminQueryModel.cs" />
+    <Compile Include="Models\QueryModel\UserQueryModel.cs" />
     <Compile Include="Models\SaleRecord.cs" />
     <Compile Include="Models\SonAdmin.cs" />
     <Compile Include="Models\User.cs" />
@@ -233,6 +252,9 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Web\Javascript\" />
     <Folder Include="Areas\Web\Models\" />
+    <Folder Include="Views\Product\" />
+    <Folder Include="Views\SonAdmin\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

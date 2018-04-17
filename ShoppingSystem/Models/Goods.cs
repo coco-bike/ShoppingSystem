@@ -6,26 +6,22 @@ using System.Web;
 
 namespace ShoppingSystem.Models
 {
-    public class File
+    public class Goods
     {
         /// <summary>
-        ///主键Id
+        /// 产品主键
         /// </summary>
         [SugarColumn(IsNullable = false, IsPrimaryKey = true, IsIdentity = true)]
         public int Id { get; set; }
         /// <summary>
-        /// 商品外键
+        /// 商品名称
         /// </summary>
-        public int GoodsId { get; set; }
+        [SugarColumn(Length = 21)]
+        public string Name { get; set; }
         /// <summary>
-        /// 文件地址
+        /// 商品价格
         /// </summary>
-        [SugarColumn(Length = 100)]
-        public string Url { get; set; }
-        /// <summary>
-        /// 0：代表缩略图,1：代表大图
-        /// </summary>
-        public int Type { get; set; }
+        public double Price { get; set; }
         /// <summary>
         /// 添加时间
         /// </summary>
@@ -35,8 +31,17 @@ namespace ShoppingSystem.Models
         /// </summary>
         public DateTime UpdateTime { get; set; }
         /// <summary>
-        /// 图片状态
+        /// 库存数量
         /// </summary>
-        public int state { get; set; }
+        public int Stock { get; set; }
+        /// <summary>
+        /// 已售数量
+        /// </summary>
+        public int SaleSum { get; set; }
+        /// <summary>
+        /// 状态
+        /// </summary>
+        public int State { get; set; }
+        
     }
 }

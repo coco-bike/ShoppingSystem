@@ -1,17 +1,15 @@
-﻿using SqlSugar;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace ShoppingSystem.Models
+namespace ShoppingSystem.Models.QueryModel
 {
-    public class File
+    public class FileQueryModel
     {
         /// <summary>
         ///主键Id
         /// </summary>
-        [SugarColumn(IsNullable = false, IsPrimaryKey = true, IsIdentity = true)]
         public int Id { get; set; }
         /// <summary>
         /// 商品外键
@@ -20,7 +18,6 @@ namespace ShoppingSystem.Models
         /// <summary>
         /// 文件地址
         /// </summary>
-        [SugarColumn(Length = 100)]
         public string Url { get; set; }
         /// <summary>
         /// 0：代表缩略图,1：代表大图
@@ -37,6 +34,5 @@ namespace ShoppingSystem.Models
         /// <summary>
         /// 图片状态
         /// </summary>
-        public int state { get; set; }
     }
 }

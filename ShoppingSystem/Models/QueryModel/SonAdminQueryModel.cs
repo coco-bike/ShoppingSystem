@@ -1,27 +1,23 @@
-﻿using SqlSugar;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace ShoppingSystem.Models
+namespace ShoppingSystem.Models.QueryModel
 {
-    public class SonAdmin
+    public class SonAdminQueryModel
     {
         /// <summary>
         /// 主键
         /// </summary>
-        [SugarColumn(IsNullable = false, IsPrimaryKey = true, IsIdentity = true)]
         public int Id { get; set; }
         /// <summary>
         /// 名称
         /// </summary>
-        [SugarColumn(Length = 21)]
         public string Name { get; set; }
         /// <summary>
         /// 密码
         /// </summary>
-        [SugarColumn(Length = 50)]
         public string PassWord { get; set; }
         /// <summary>
         /// 注册时间
