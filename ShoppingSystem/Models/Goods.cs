@@ -23,6 +23,10 @@ namespace ShoppingSystem.Models
         /// </summary>
         public double Price { get; set; }
         /// <summary>
+        /// 商品类型，1：饮料、2：零食
+        /// </summary>
+        public int Type{get;set;}
+        /// <summary>
         /// 添加时间
         /// </summary>
         public DateTime AddTime { get; set; }

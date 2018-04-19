@@ -22,6 +22,10 @@ namespace ShoppingSystem.Models.InputModel
         [Required(ErrorMessage = "商品价格不能为空")]
         public double Price { get; set; }
 
+        [Display(Name = "商品类型")]
+        [Required(ErrorMessage = "商品类型不能为空")]
+        public int Type { get; set; }
+
         [Display(Name = "商品上架时间")]
         [Required(ErrorMessage = "商品上架时间不能为空")]
         public DateTime AddTime { get; set; }
