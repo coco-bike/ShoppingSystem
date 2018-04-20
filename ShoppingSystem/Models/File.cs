@@ -37,6 +37,6 @@ namespace ShoppingSystem.Models
         /// <summary>
         /// 图片状态
         /// </summary>
-        public int state { get; set; }
+        public int State { get; set; }
     }
 }

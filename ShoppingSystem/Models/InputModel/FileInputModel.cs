@@ -36,6 +36,6 @@ namespace ShoppingSystem.Models.InputModel
 
         [Display(Name = "文件状态")]
         [Required(ErrorMessage = "文件状态不能为空")]
-        public int state { get; set; }
+        public int State { get; set; }
     }
 }

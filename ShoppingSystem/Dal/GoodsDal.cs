@@ -1,5 +1,6 @@
 ﻿using ShoppingSystem.Models;
 using ShoppingSystem.Models.InputModel;
+using ShoppingSystem.Models.QueryModel;
 using ShoppingSystem.SqlSugar;
 using SqlSugar;
 using System;
@@ -33,6 +34,27 @@ namespace ShoppingSystem.Dal
             return result;
         }
         /// <summary>
+        /// 获取商品信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public GoodsQueryModel GetGoods(string id)
+        {
+            var result = GoodsDb.GetById(id);
+            GoodsQueryModel queryModel = new GoodsQueryModel()
+            {
+                AddTime=result.AddTime,
+                Id=result.Id,
+                Name=result.Name,
+                Price=result.Price,
+                SaleSum=result.SaleSum,
+                Stock=result.Stock,
+                UpdateTime=result.UpdateTime
+            };
+            return queryModel;
+        }
+
+        /// <summary>
         /// 获取商品分页
         /// </summary>
         /// <param name="page"></param>
@@ -46,9 +68,17 @@ namespace ShoppingSystem.Dal
                 PageIndex = page,
                 PageSize = 0
             };
-            List<Goods> goods = new List<Goods>();
-            var result = GoodsDb.GetPageList(s=>s.State==1,pageModel);
-            return new { total = pageModel.PageSize, list = result };
+            var result = GoodsDb.GetPageList(s => s.State == 1, pageModel).OrderBy(s=>s.UpdateTime).Select(s => new GoodsQueryModel
+            {
+                AddTime = s.AddTime,
+                Id = s.Id,
+                Name = s.Name,
+                Price = s.Price,
+                SaleSum = s.SaleSum,
+                Stock = s.Stock,
+                UpdateTime = s.UpdateTime
+            }).ToList();
+            return new { total = pageModel.PageSize, rows = result };
         }
         /// <summary>
         /// 更新商品
