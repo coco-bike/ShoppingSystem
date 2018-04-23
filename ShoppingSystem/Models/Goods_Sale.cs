@@ -8,6 +8,11 @@ namespace ShoppingSystem.Models
 {
     public class Goods_Sale
     {
+        ///// <summary>
+        /////主键Id
+        ///// </summary>
+        //[SugarColumn(IsNullable = false, IsPrimaryKey = true, IsIdentity = true)]
+        //public int Id { get; set; }
         /// <summary>
         /// 商品外键
         /// </summary>

@@ -60,9 +60,9 @@ namespace ShoppingSystem.Dal
         {
             PageModel pageModel = new PageModel()
             {
-                PageCount = rows,
+                PageCount = 0,
                 PageIndex = page,
-                PageSize = 0
+                PageSize = rows
             };
             var result = FileDb.GetPageList(s => s.State == 1, pageModel).OrderBy(s => s.UpdateTime).Select(s => new FileQueryModel
             {
@@ -74,7 +74,7 @@ namespace ShoppingSystem.Dal
                 Url = s.Url
             }).ToList();
 
-            return new { total = pageModel.PageSize, rows = result };
+            return new { total = pageModel.PageCount, rows = result };
         }
 
         /// <summary>

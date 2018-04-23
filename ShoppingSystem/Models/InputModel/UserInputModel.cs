@@ -19,7 +19,7 @@ namespace ShoppingSystem.Models.InputModel
         public string Email { get; set; }
 
         [Display(Name = "客户电子邮件")]
-        [Required(ErrorMessage = "客户电子邮件不能为空")]
+        [Required(ErrorMessage = "密码不能为空")]
         [RegularExpression("",ErrorMessage ="")]
         public string PassWord { get; set; }
         /// <summary>

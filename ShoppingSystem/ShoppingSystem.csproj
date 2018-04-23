@@ -153,8 +153,9 @@
     <Compile Include="Areas\Web\WebAreaRegistration.cs" />
     <Compile Include="Common\ConfigHelper.cs" />
     <Compile Include="Common\DataCache.cs" />
+    <Compile Include="Controllers\GoodsSaleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\GoodsController.cs" />
     <Compile Include="Controllers\SonAdminController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Dal\FileDal.cs" />
@@ -162,6 +163,7 @@
     <Compile Include="Dal\GoodsSaleDal.cs" />
     <Compile Include="Dal\SaleRecordDal.cs" />
     <Compile Include="Dal\SonAdminDal.cs" />
+    <Compile Include="Dal\SqlTransaction\ShoppingSqlTransaction.cs" />
     <Compile Include="Dal\UserDal.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -252,6 +254,7 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Web\Javascript\" />
     <Folder Include="Areas\Web\Models\" />
+    <Folder Include="Views\GoodsSale\" />
     <Folder Include="Views\Product\" />
     <Folder Include="Views\SonAdmin\" />
     <Folder Include="Views\User\" />

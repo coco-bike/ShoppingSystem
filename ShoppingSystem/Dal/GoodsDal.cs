@@ -17,7 +17,7 @@ namespace ShoppingSystem.Dal
         /// </summary>
         /// <param name="inputModel"></param>
         /// <returns></returns>
-        public bool AddGoods(GoodsInputModel inputModel)
+        public int AddGoods(GoodsInputModel inputModel)
         {
             Goods goods = new Goods()
             {
@@ -31,7 +31,12 @@ namespace ShoppingSystem.Dal
                 UpdateTime = DateTime.Now
             };
             var result = GoodsDb.Insert(goods);
-            return result;
+            int goodsId=0;
+            if (result)
+            {
+                goodsId = goods.Id;
+            }
+            return goodsId;
         }
         /// <summary>
         /// 获取商品信息
@@ -64,9 +69,9 @@ namespace ShoppingSystem.Dal
         {
             PageModel pageModel = new PageModel()
             {
-                PageCount = rows,
+                PageCount = 0,
                 PageIndex = page,
-                PageSize = 0
+                PageSize = rows
             };
             var result = GoodsDb.GetPageList(s => s.State == 1, pageModel).OrderBy(s=>s.UpdateTime).Select(s => new GoodsQueryModel
             {
@@ -78,7 +83,7 @@ namespace ShoppingSystem.Dal
                 Stock = s.Stock,
                 UpdateTime = s.UpdateTime
             }).ToList();
-            return new { total = pageModel.PageSize, rows = result };
+            return new { total = pageModel.PageCount, rows = result };
         }
         /// <summary>
         /// 更新商品

@@ -29,6 +29,7 @@ namespace ShoppingSystem.SqlSugar
         public DbSet<SaleRecord> SaleRecordDb { get { return new DbSet<SaleRecord>(Db); } }
         public DbSet<SonAdmin> SonAdminDb { get { return new DbSet<SonAdmin>(Db); } }
         public DbSet<User> UserDb { get { return new DbSet<User>(Db); } }
+        public DbSet<Goods_Sale> GoodsSaleDb { get { return new DbSet<Goods_Sale>(Db); } }
 
     }
 }
